@@ -179,8 +179,12 @@ function Validate(){};
 
   $(document).on('click', '#info', function(){
 
-    $('#openModal > div').empty();
+    $('.button').bind('click', function(){
 
+    $('#info').remove();
+
+  })
+    
     $('#openModal > div').append(
       '<h2>Este es tu pedido</h2>' +
       '<ul>' +
@@ -198,5 +202,7 @@ function Validate(){};
       $('#listMeals > ul').append('<li>El producto ' + key + ' cuesta $' + value + ' M/Cte</li>');
     });
   });
+
+  
 
 });
