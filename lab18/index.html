@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="moreDirectives">
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript">
+          var app = angular.module('moreDirectives',[]);
+         
+    </script>
+</head>
+<body>
+     <table border="0">
+        <tr>
+            <td><input type="checkbox" ng-model="enableDisableButton">Disable Button</td>
+            <td><button ng-disabled="enableDisableButton">Click Me</button></td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" ng-model="showHide">Disable Button</td>
+            <td><button ng-show="showHide">Click Me</button></td>
+        </tr>
+
+        <tr>
+            <td><p>Total click: {{ click_counter }}</p></td>
+            <td><button ng-click="click_counter = click_counter + 1">Click Me!</button></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
